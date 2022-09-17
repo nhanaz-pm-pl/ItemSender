@@ -1,0 +1,21 @@
+---
+name: ItemSender
+version: 0.0.1
+main: NhanAZ\ItemSender\Main
+api: 4.0.0
+
+website: https://github.com/NhanAZ
+description: Sending the item in hand to someone
+author: NhanAZ
+
+commands:
+  itemsender:
+    description: Sending the item in hand to someone
+    usage: "/itemsender <player> <amount>"
+    aliases: [itemsend]
+    permission: itemsender.command
+permissions:
+  itemsender.command:
+    description: Permission for /itemsender
+    default: true
+...
