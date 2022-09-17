@@ -48,6 +48,7 @@ class Main extends PluginBase {
 			$itemName = $item->getName();
 			$itemCount = $item->getCount();
 			if ($item->equals(VanillaItems::AIR())) {
+				// Call to an undefined static method pocketmine\item\VanillaItems::AIR().
 				$sender->sendMessage("§cYou can't send §b$itemName §cto §b$playerName");
 				$sender->getNetworkSession()->sendDataPacket(PlaySoundPacket::create("mob.villager.no", $senderPos->getX(), $senderPos->getY(), $senderPos->getZ(), 1, 1));
 				return true;
