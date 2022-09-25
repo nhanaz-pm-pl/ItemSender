@@ -1,0 +1,21 @@
+---
+cmdInTerminal: "&cYou can't use this command in the terminal!"
+
+argumentsBlank: "&cPlease do not leave arguments blank!"
+
+invalidTarget: "&cThe target with the name &b{target} &cdoes not exist or is not online."
+
+invalidInput: "&b<amount>&c must be numeric and greater than &b0"
+
+sendYourself: "&cYou can't send items to yourself"
+
+sendAir: "&cYou can't send &b{air} &cto &b{target}"
+
+notEnoughItems: "&cYou don't have enough &b{itemCount} {itemName} &cin hand to send &b{target}"
+
+notEnoughSpace: "&b{target}'s &cinventory doesn't have enough space!"
+
+sentSuccessfully: "&aSent &b{itemCount} {itemName} &ato &b{target}"
+
+receivedSuccessfully: "&aYou received &b{itemCount} {itemName} &afrom &b{target}"
+...
