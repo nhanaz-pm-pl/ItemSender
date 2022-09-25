@@ -1,6 +1,6 @@
 ---
 name: ItemSender
-version: 0.0.1
+version: 0.0.2
 main: NhanAZ\ItemSender\Main
 api: 4.0.0
 
