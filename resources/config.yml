@@ -15,7 +15,7 @@ notEnoughItems: "&cYou don't have enough &b{itemCount} {itemName} &cin hand to s
 
 notEnoughSpace: "&b{target}'s &cinventory doesn't have enough space!"
 
-sentSuccessfully: "&aSent &bx{itemCount} {itemName} &ato &b{target}&a!"
+sentSuccessfully: "&aSent&b x{itemCount} {itemName} &ato &b{target}&a!"
 
-receivedSuccessfully: "&aYou received &bx{itemCount} {itemName} &afrom &b{target}&a!"
+receivedSuccessfully: "&aYou received&b x{itemCount} {itemName} &afrom &b{target}&a!"
 ...
