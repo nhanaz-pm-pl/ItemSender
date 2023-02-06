@@ -36,7 +36,7 @@ class Main extends PluginBase {
 				$this->playSound($sender, "mob.villager.no");
 				return true;
 			}
-			if (!is_numeric($args[1]) || $args[1] < 1) {
+			if (!((is_int($args[1]) || ctype_digit($args[1])) && (int)$args[1] >= 1 && (int)$args[1] <= 64)) {
 				$sender->sendMessage(TextFormat::colorize($this->getConfig()->get("invalidInput")));
 				$this->playSound($sender, "mob.villager.no");
 				return true;

@@ -3,19 +3,19 @@ cmdInTerminal: "&cYou can't use this command in the terminal!"
 
 argumentsBlank: "&cPlease do not leave arguments blank!"
 
-invalidTarget: "&cThe target with the name &b{target} &cdoes not exist or is not online."
+invalidTarget: "&cThe target with the name &b{target} &cdoes not exist or is not online!"
 
-invalidInput: "&b<amount>&c must be numeric and greater than &b0"
+invalidInput: "&b<amount>&c is not valid! (1 ≥ <amount: int> ≤ 64)"
 
-sendYourself: "&cYou can't send items to yourself"
+sendYourself: "&cYou can't send items to yourself!"
 
-sendAir: "&cYou can't send &b{air} &cto &b{target}"
+sendAir: "&cYou can't send &b{air} &cto &b{target}&c!"
 
-notEnoughItems: "&cYou don't have enough &b{itemCount} {itemName} &cin hand to send &b{target}"
+notEnoughItems: "&cYou don't have enough &b{itemCount} {itemName} &cin hand to send &b{target}&c!"
 
 notEnoughSpace: "&b{target}'s &cinventory doesn't have enough space!"
 
-sentSuccessfully: "&aSent &b{itemCount} {itemName} &ato &b{target}"
+sentSuccessfully: "&aSent &bx{itemCount} {itemName} &ato &b{target}&a!"
 
-receivedSuccessfully: "&aYou received &b{itemCount} {itemName} &afrom &b{target}"
+receivedSuccessfully: "&aYou received &bx{itemCount} {itemName} &afrom &b{target}&a!"
 ...
