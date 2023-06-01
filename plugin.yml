@@ -2,7 +2,7 @@
 name: ItemSender
 version: 0.0.3
 main: NhanAZ\ItemSender\Main
-api: 4.1.0
+api: 5.0.0
 
 website: https://github.com/NhanAZ
 description: Sending the item in hand to someone
