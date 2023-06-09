@@ -48,6 +48,7 @@ class Main extends PluginBase {
 				return true;
 			}
 			$targetName = $target->getName();
+			$senderName = $sender->getName();
 			$item = $sender->getInventory()->getItemInHand();
 			$itemName = $item->getName();
 			$itemCount = $item->getCount();
@@ -71,7 +72,7 @@ class Main extends PluginBase {
 			$target->getInventory()->addItem($item->setCount((int) $args[1]));
 			$sender->sendMessage(TextFormat::colorize(str_replace(["{itemCount}", "{itemName}", "{target}"], [$args[1], $itemName, $targetName], $this->getConfig()->get("sentSuccessfully"))));
 			$this->playSound($sender, "mob.villager.yes");
-			$target->sendMessage(TextFormat::colorize(str_replace(["{itemCount}", "{itemName}", "{target}"], [$args[1], $itemName, $targetName], $this->getConfig()->get("receivedSuccessfully"))));
+			$target->sendMessage(TextFormat::colorize(str_replace(["{itemCount}", "{itemName}", "{target}"], [$args[1], $itemName, $senderName], $this->getConfig()->get("receivedSuccessfully"))));
 			$this->playSound($target, "mob.villager.yes");
 			return true;
 		}
