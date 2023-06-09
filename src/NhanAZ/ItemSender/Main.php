@@ -9,14 +9,22 @@ use pocketmine\command\CommandSender;
 use pocketmine\plugin\PluginBase;
 use pocketmine\player\Player;
 use pocketmine\network\mcpe\protocol\PlaySoundPacket;
-use pocketmine\item\VanillaItems;
 use pocketmine\utils\TextFormat;
 
 class Main extends PluginBase {
 
 	private function playSound(Player $player, string $soundName) {
 		$playerPos = $player->getPosition();
-		$player->getNetworkSession()->sendDataPacket(PlaySoundPacket::create($soundName, $playerPos->getX(), $playerPos->getY(), $playerPos->getZ(), 1, 1));
+		$player->getNetworkSession()->sendDataPacket(
+			PlaySoundPacket::create(
+				soundName: $soundName,
+				x: $playerPos->getX(),
+				y: $playerPos->getY(),
+				z: $playerPos->getZ(),
+				volume: 1.0,
+				pitch: 1.0
+			)
+		);
 	}
 
 	public function onCommand(CommandSender $sender, Command $command, string $label, array $args): bool {
@@ -52,8 +60,7 @@ class Main extends PluginBase {
 			$item = $sender->getInventory()->getItemInHand();
 			$itemName = $item->getName();
 			$itemCount = $item->getCount();
-			if ($item->equals(VanillaItems::AIR())) {
-				// Call to an undefined static method pocketmine\item\VanillaItems::AIR().
+			if ($item->isNull()) {
 				$sender->sendMessage(TextFormat::colorize(str_replace(["{air}", "{target}"], [$itemName, $targetName], $this->getConfig()->get("sendAir"))));
 				$this->playSound($sender, "mob.villager.no");
 				return true;
