@@ -59,14 +59,13 @@ class Main extends PluginBase {
 			$senderName = $sender->getName();
 			$item = $sender->getInventory()->getItemInHand();
 			$itemName = $item->getName();
-			$itemCount = $item->getCount();
 			if ($item->isNull()) {
 				$sender->sendMessage(TextFormat::colorize(str_replace(["{air}", "{target}"], [$itemName, $targetName], $this->getConfig()->get("sendAir"))));
 				$this->playSound($sender, "mob.villager.no");
 				return true;
 			}
 			if ($item->getCount() < $args[1]) {
-				$sender->sendMessage(TextFormat::colorize(str_replace(["{itemCount}", "{itemName}", "{target}"], [$itemCount, $itemName, $targetName], $this->getConfig()->get("notEnoughItems"))));
+				$sender->sendMessage(TextFormat::colorize(str_replace(["{itemCount}", "{itemName}", "{target}"], [$args[1], $itemName, $targetName], $this->getConfig()->get("notEnoughItems"))));
 				$this->playSound($sender, "mob.villager.no");
 				return true;
 			}
